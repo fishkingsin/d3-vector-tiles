@@ -19,7 +19,7 @@ var zoom = d3.behavior.zoom()
     .scale(projection.scale() * 2 * Math.PI)
     .scaleExtent([1 << 12, 1 << 25]) // 12 to 25 is roughly z4-z5 to z17
     //sf - 37.7524/-122.4407
-    .translate(projection([22.28705, 114.21235]).map(function(x) { return -x; }))
+    .translate(projection([114.21235,22.28705]).map(function(x) { return -x; }))
     .on("zoom", zoomed);
 
 var map = d3.select("body").append("div")
